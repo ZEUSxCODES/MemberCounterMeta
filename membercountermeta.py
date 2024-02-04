@@ -27,18 +27,18 @@ async def main_MemberCounterMeta():
         try:
             while True:
                 print(text_2)
-                edit_message_text_teletips = "**📈 | Real-Time Member Counter** [ᵐᵉᵗᵃ](https://github.com/teletips/MemberCounterMeta#:~:text=Versions-,1.0%20Meta,-Credits)"
+                edit_message_text_teletips = "**📈 | ᴀᴍʜ ꜰᴀᴍɪʟʏ ᴄᴏᴜɴᴛᴇʀ™**"
                 for CHANNEL_OR_GROUP in CHANNEL_OR_GROUP_LIST:
                     try:
                         get_chat_teletips = await MemberCounterMeta.get_chat(int(CHANNEL_OR_GROUP))   
                         if get_chat_teletips.type == "channel":
-                            edit_message_text_teletips += f"\n\n📣  **{get_chat_teletips.title}**\n👤 ├ <i>{get_chat_teletips.members_count} Subscribers</i>\n🔗 └ <i>[Link]({get_chat_teletips.invite_link})</i>"
+                            edit_message_text_teletips += f"\n\n➯  **{get_chat_teletips.title}**\n유 ├ <i>{get_chat_teletips.members_count} Subscribers</i>\nシ └ <i>[]({get_chat_teletips.invite_link})</i>"
                         else:
-                            edit_message_text_teletips += f"\n\n💬  **{get_chat_teletips.title}**\n👤 ├ <i>{get_chat_teletips.members_count} Members</i>\n🔗 └ <i>[Link]({get_chat_teletips.invite_link})</i>" 
+                            edit_message_text_teletips += f"\n\n➯  **{get_chat_teletips.title}**\n유 ├ <i>{get_chat_teletips.members_count} Members</i>\nシ └ <i>[Link]({get_chat_teletips.invite_link})</i>" 
                         await asyncio.sleep(2)
                     except ValueError:
                         print(f'ID not found: {CHANNEL_OR_GROUP }. Skipping...')                       
-                edit_message_text_teletips += f"\n\n<i>Automatically refreshes every 15 minutes</i>"
+                edit_message_text_teletips += f"\n\n<i>ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ʀᴇꜰʀᴇꜱʜᴇꜱ ᴇᴠᴇʀʏ 15 ᴍɪɴᴜᴛᴇꜱ</i> \n\n[©️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴇᴡ ʀᴇʟᴇᴀꜱᴇᴅ ᴍᴏᴠɪᴇꜱ](https://t.me/Pros_Movies_Empire)"
                 try:
                     await MemberCounterMeta.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, edit_message_text_teletips, disable_web_page_preview=True)
                 except Exception:
