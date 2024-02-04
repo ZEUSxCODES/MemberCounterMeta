@@ -38,7 +38,7 @@
     "formation": {
     "worker": {
       "quantity": 1,
-      "size": "performance-l"
+      "size": "basic"
     }
   },
     "buildpacks": [
